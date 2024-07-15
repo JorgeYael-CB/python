@@ -29,6 +29,31 @@ def ordenar_palabra( palabra: str ):
   print( palabras )
 
 
+def check_zeros( *args ):
+  number = -1;
+
+  for n in args:
+    if number == 0 and number == n:
+      return True
+    else:
+      number = n
+  return False
+
+
+def contar_primos( number: int ):
+  for n in range(2, number + 1, 1):
+    if n > 3 and (n % 2 == 0 or n % 3 == 0):
+      print(f'No es primo: {n}')
+    else:
+      print(f'Si es primo: {n}')
+
+
+contar_primos(100)
+
+
+
+# print( check_zeros(1, 2, 3,4 ,5, 0, 0) ) #true
+# print( check_zeros(1, 2, 3,4 ,5, 0, 1) ) #false
 
 
 # ordenar_palabra('Hello World')
